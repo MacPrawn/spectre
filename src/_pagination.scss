@@ -18,8 +18,10 @@
       display: inline-block;
       padding: $unit-1 $unit-2;
       text-decoration: none;
-      &:focus,
-      &:hover {
+      &:focus {
+        color: $primary-color;
+      }
+      @include hover-supported {
         color: $primary-color;
       }
     }

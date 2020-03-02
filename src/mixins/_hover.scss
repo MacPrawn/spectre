@@ -1,0 +1,12 @@
+@mixin hover-supported {    
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+}
+@mixin hover-not-supported {    
+    @media (hover: none) {
+        @content;
+    }
+}

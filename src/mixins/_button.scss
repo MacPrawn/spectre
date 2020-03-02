@@ -6,8 +6,12 @@
   &:focus {
     @include control-shadow($color);
   }
-  &:focus,
-  &:hover {
+  &:focus {
+    background: darken($color, 2%);
+    border-color: darken($color, 5%);
+    color: $light-color;
+  }
+  @include hover-supported {
     background: darken($color, 2%);
     border-color: darken($color, 5%);
     color: $light-color;
@@ -33,8 +37,12 @@
   &:focus {
     @include control-shadow($color);
   }
-  &:focus,
-  &:hover {
+  &:focus {
+    background: lighten($color, 50%);
+    border-color: darken($color, 2%);
+    color: $color;
+  }
+  @include hover-supported {
     background: lighten($color, 50%);
     border-color: darken($color, 2%);
     color: $color;

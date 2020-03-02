@@ -21,8 +21,12 @@
   &:focus {
     @include control-shadow();
   }
-  &:focus,
-  &:hover {
+  &:focus {
+    background: $secondary-color;
+    border-color: $primary-color-dark;
+    text-decoration: none;
+  }
+  @include hover-supported {
     background: $secondary-color;
     border-color: $primary-color-dark;
     text-decoration: none;
@@ -53,8 +57,12 @@
     background: $primary-color;
     border-color: $primary-color-dark;
     color: $light-color;
-    &:focus,
-    &:hover {
+    &:focus {
+      background: darken($primary-color-dark, 2%);
+      border-color: darken($primary-color-dark, 5%);
+      color: $light-color;
+    }
+    @include hover-supported {
       background: darken($primary-color-dark, 2%);
       border-color: darken($primary-color-dark, 5%);
       color: $light-color;
@@ -88,9 +96,11 @@
     border-color: transparent;
     color: $link-color;
     &:focus,
-    &:hover,
     &:active,
     &.active {
+      color: $link-color-dark;
+    }
+    @include hover-supported {
       color: $link-color-dark;
     }
   }
@@ -143,8 +153,11 @@
     text-decoration: none;
     width: $unit-5;
 
-    &:focus,
-    &:hover {
+    &:focus {
+      background: rgba($bg-color, .5);
+      opacity: .95;
+    }
+    @include hover-supported {
       background: rgba($bg-color, .5);
       opacity: .95;
     }
@@ -176,9 +189,11 @@
       margin-left: -$border-width;
     }
     &:focus,
-    &:hover,
     &:active,
     &.active {
+      z-index: $zindex-0;
+    }
+    @include hover-supported {
       z-index: $zindex-0;
     }
   }

@@ -28,8 +28,11 @@
       margin: 0 (-$unit-2);
       padding: $unit-1 $unit-2;
       text-decoration: none;
-      &:focus,
-      &:hover {
+      &:focus {
+        background: $secondary-color;
+        color: $primary-color;
+      }
+      @include hover-supported {
         background: $secondary-color;
         color: $primary-color;
       }

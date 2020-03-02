@@ -16,8 +16,10 @@
   }
 
   a#{$name} {
-    &:focus,
-    &:hover {
+    &:focus {
+      color: darken($color, 5%);
+    }
+    @include hover-supported {
       color: darken($color, 5%);
     }
     &:visited {

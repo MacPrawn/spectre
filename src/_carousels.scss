@@ -41,7 +41,13 @@ $carousel-number: 8;
       top: 0;
       width: 100%;
 
-      &:hover {
+      @include hover-supported {
+        .item-prev,
+        .item-next {
+          opacity: 1;
+        }
+      }
+      @include hover-not-supported {
         .item-prev,
         .item-next {
           opacity: 1;

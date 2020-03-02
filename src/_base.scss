@@ -31,9 +31,12 @@ a {
   }
 
   &:focus,
-  &:hover,
   &:active,
   &.active {
+    color: $link-color-dark;
+    text-decoration: underline;
+  }
+  @include hover-supported {
     color: $link-color-dark;
     text-decoration: underline;
   }

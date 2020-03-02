@@ -10,8 +10,10 @@
       color: $gray-color-dark;
       padding: $unit-1 $unit-2;
       text-decoration: none;
-      &:focus,
-      &:hover {
+      &:focus {
+        color: $primary-color;
+      }
+      @include hover-supported {
         color: $primary-color;
       }
     }
@@ -19,8 +21,10 @@
       & > a {
         color: darken($gray-color-dark, 10%);
         font-weight: bold;
-        &:focus,
-        &:hover {
+        &:focus {
+          color: $primary-color;
+        }
+        @include hover-supported {
           color: $primary-color;
         }
       }

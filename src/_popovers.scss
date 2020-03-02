@@ -15,11 +15,17 @@
     z-index: $zindex-3;
   }
 
-  *:focus + .popover-container,
-  &:hover .popover-container {
+  *:focus + .popover-container {
     display: block;
     opacity: 1;
     transform: translate(-50%, -100%) scale(1);
+  }
+  @include hover-supported {
+    .popover-container {
+      display: block;
+      opacity: 1;
+      transform: translate(-50%, -100%) scale(1);
+    }
   }
 
   &.popover-right {
@@ -28,9 +34,13 @@
       top: 50%;
     }
 
-    *:focus + .popover-container,
-    &:hover .popover-container {
+    *:focus + .popover-container {
       transform: translate(0, -50%) scale(1);
+    }
+    @include hover-supported {
+      .popover-container {
+        transform: translate(0, -50%) scale(1);
+      }
     }
   }
 
@@ -40,9 +50,13 @@
       top: 100%;
     }
 
-    *:focus + .popover-container,
-    &:hover .popover-container {
+    *:focus + .popover-container {
       transform: translate(-50%, 0) scale(1);
+    }
+    @include hover-supported {
+      .popover-container {
+        transform: translate(-50%, 0) scale(1);
+      }
     }
   }
 
@@ -52,9 +66,13 @@
       top: 50%;
     }
 
-    *:focus + .popover-container,
-    &:hover .popover-container {
+    *:focus + .popover-container {
       transform: translate(-100%, -50%) scale(1);
+    }
+    @include hover-supported {
+      .popover-container {
+        transform: translate(-100%, -50%) scale(1);
+      }
     }
   }
 

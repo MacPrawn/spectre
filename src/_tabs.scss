@@ -17,8 +17,10 @@
       margin: 0 $unit-2 0 0;
       padding: $unit-2 $unit-1 $unit-2 - $border-width-lg $unit-1;
       text-decoration: none;
-      &:focus,
-      &:hover {
+      &:focus {
+        color: $link-color;
+      }
+      @include hover-supported {
         color: $link-color;
       }
     }

@@ -22,8 +22,13 @@
     white-space: pre;
     z-index: $zindex-3;
   }
-  &:focus,
-  &:hover {
+  &:focus {
+    &::after {
+      opacity: 1;
+      transform: translate(-50%, -$unit-1);
+    }
+  }
+  @include hover-supported {
     &::after {
       opacity: 1;
       transform: translate(-50%, -$unit-1);
@@ -40,8 +45,12 @@
       left: 100%;
       transform: translate(-$unit-1, 50%);
     }
-    &:focus,
-    &:hover {
+    &:focus {
+      &::after {
+        transform: translate($unit-1, 50%);
+      }
+    }
+    @include hover-supported {
       &::after {
         transform: translate($unit-1, 50%);
       }
@@ -54,8 +63,12 @@
       top: 100%;
       transform: translate(-50%, -$unit-2);
     }
-    &:focus,
-    &:hover {
+    &:focus {
+      &::after {
+        transform: translate(-50%, $unit-1);
+      }
+    }
+    @include hover-supported {
       &::after {
         transform: translate(-50%, $unit-1);
       }
@@ -69,8 +82,12 @@
       right: 100%;
       transform: translate($unit-2, 50%);
     }
-    &:focus,
-    &:hover {
+    &:focus {
+      &::after {
+        transform: translate(-$unit-1, 50%);
+      }
+    }
+    @include hover-supported {
       &::after {
         transform: translate(-$unit-1, 50%);
       }

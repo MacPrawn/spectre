@@ -73,8 +73,13 @@
         @include control-shadow();
       }
 
-      &:focus,
-      &:hover {
+      &:focus {
+        background: $secondary-color-light;
+        border-color: $secondary-color-dark;
+        color: $primary-color;
+        text-decoration: none;
+      }
+      @include hover-supported {
         background: $secondary-color-light;
         border-color: $secondary-color-dark;
         color: $primary-color;
