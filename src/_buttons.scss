@@ -84,10 +84,56 @@
   // Button Colors
   &.btn-success {
     @include button-variant($success-color);
-  }
 
+    &.btn-link {
+      background: transparent;
+      border-color: transparent;
+      color: $success-color;
+      &:focus,
+      &:active,
+      &.active {
+        color: $success-color-dark;
+      }
+      @include hover-supported {
+        color: $success-color-dark;
+      }
+    }
+  }
+  
   &.btn-error {
     @include button-variant($error-color);
+
+    &.btn-link {
+      background: transparent;
+      border-color: transparent;
+      color: $error-color;
+      &:focus,
+      &:active,
+      &.active {
+        color: $error-color-dark;
+      }
+      @include hover-supported {
+        color: $error-color-dark;
+      }
+    }
+  }
+
+  &.btn-warning {
+    @include button-variant($warning-color);
+
+    &.btn-link {
+      background: transparent;
+      border-color: transparent;
+      color: $warning-color;
+      &:focus,
+      &:active,
+      &.active {
+        color: $warning-color-dark;
+      }
+      @include hover-supported {
+        color: $warning-color-dark;
+      }
+    }
   }
 
   // Button Link

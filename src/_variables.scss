@@ -28,8 +28,16 @@ $bg-color-light: $light-color !default;
 
 // Control colors
 $success-color: #32b643 !default;
+$success-color-dark: darken($success-color, 10%) !default;
+$success-color-light: lighten($success-color, 10%) !default;
+
 $warning-color: #ffb700 !default;
+$warning-color-dark: darken($warning-color, 10%) !default;
+$warning-color-light: lighten($warning-color, 10%) !default;
+
 $error-color: #e85600 !default;
+$error-color-dark: darken($error-color, 10%) !default;
+$error-color-light: lighten($error-color, 10%) !default;
 
 // Other colors
 $code-color: #d73e48 !default;
