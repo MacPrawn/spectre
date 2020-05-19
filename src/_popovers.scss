@@ -80,6 +80,45 @@
     }
   }
 
+  &.popover-over {
+    .popover-container {
+      left: 50%;
+      top: 50%;
+    }
+
+    *:focus + .popover-container,
+    &.active > .popover-container {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    @include hover-supported {
+      .popover-container {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  }
+
+  @media (max-width: $size-sm) {
+    &.popover-top,
+    &.popover-right,
+    &.popover-left,
+    &.popover-bottom {
+      .popover-container {
+        left: 50%;
+        top: 50%;
+      }
+  
+      *:focus + .popover-container,
+      &.active > .popover-container {
+        transform: translate(-50%, -50%) scale(1);
+      }
+      @include hover-supported {
+        .popover-container {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+    }
+  }
+
   .card {
     @include shadow-variant(.2rem);
     border: 0;
