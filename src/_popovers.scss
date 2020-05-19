@@ -16,7 +16,7 @@
   }
 
   *:focus + .popover-container,
-  &.active {
+  &.active > .popover-container {
     display: block;
     opacity: 1;
     transform: translate(-50%, -100%) scale(1);
@@ -36,7 +36,7 @@
     }
 
     *:focus + .popover-container,
-    &.active {
+    &.active > .popover-container {
       transform: translate(0, -50%) scale(1);
     }
     @include hover-supported {
@@ -53,7 +53,7 @@
     }
 
     *:focus + .popover-container,
-    &.active {
+    &.active > .popover-container {
       transform: translate(-50%, 0) scale(1);
     }
     @include hover-supported {
@@ -70,7 +70,7 @@
     }
 
     *:focus + .popover-container,
-    &.active {
+    &.active > .popover-container {
       transform: translate(-100%, -50%) scale(1);
     }
     @include hover-supported {
