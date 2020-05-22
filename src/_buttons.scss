@@ -93,9 +93,11 @@
       &:active,
       &.active {
         color: $success-color-dark;
+        background: transparent;
       }
       @include hover-supported {
         color: $success-color-dark;
+        background: transparent;
       }
     }
   }
