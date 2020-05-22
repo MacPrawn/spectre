@@ -93,11 +93,9 @@
       &:active,
       &.active {
         color: $success-color-dark;
-        background: transparent;
       }
       @include hover-supported {
         color: $success-color-dark;
-        background: transparent;
       }
     }
   }
@@ -147,9 +145,11 @@
     &:active,
     &.active {
       color: $link-color-dark;
+      background: transparent;
     }
     @include hover-supported {
       color: $link-color-dark;
+      background: transparent;
     }
   }
 
