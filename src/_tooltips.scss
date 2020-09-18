@@ -22,13 +22,7 @@
     white-space: pre;
     z-index: $zindex-3;
   }
-  &:focus {
-    &::after {
-      opacity: 1;
-      transform: translate(-50%, -$unit-1);
-    }
-  }
-  @include hover-supported {
+  &:focus, &:hover {
     &::after {
       opacity: 1;
       transform: translate(-50%, -$unit-1);
@@ -45,12 +39,7 @@
       left: 100%;
       transform: translate(-$unit-1, 50%);
     }
-    &:focus {
-      &::after {
-        transform: translate($unit-1, 50%);
-      }
-    }
-    @include hover-supported {
+    &:focus, &:hover {
       &::after {
         transform: translate($unit-1, 50%);
       }
@@ -63,12 +52,7 @@
       top: 100%;
       transform: translate(-50%, -$unit-2);
     }
-    &:focus {
-      &::after {
-        transform: translate(-50%, $unit-1);
-      }
-    }
-    @include hover-supported {
+    &:focus, &:hover {
       &::after {
         transform: translate(-50%, $unit-1);
       }
@@ -83,12 +67,7 @@
       transform: translate($unit-2, 50%);
     }
     &:focus {
-      &::after {
-        transform: translate(-$unit-1, 50%);
-      }
-    }
-    @include hover-supported {
-      &::after {
+      &::after, &:hover {
         transform: translate(-$unit-1, 50%);
       }
     }
