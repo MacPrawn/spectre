@@ -21,7 +21,7 @@
   }
 
   &.active .menu,
-  .dropdown-toggle:focus + .menu {
+  &:not(.active) .dropdown-toggle:focus + .menu {
     display: block;
   }
   @include hover-supported {
