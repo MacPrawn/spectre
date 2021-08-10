@@ -20,7 +20,7 @@ h6 {
 .h6 {
   font-weight: 500;
 }
-// calculate clamp values: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case
+// clamp value calculator: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case
 h1,
 .h1 {
   font-size: clamp(1rem, 0.5714rem + 2.3810vw, 2rem);
