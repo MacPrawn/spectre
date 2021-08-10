@@ -20,29 +20,30 @@ h6 {
 .h6 {
   font-weight: 500;
 }
+// https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case
 h1,
 .h1 {
-  font-size: 2rem;
+  font-size: clamp(1rem, 0.5714rem + 2.3810vw, 2rem);
 }
 h2,
 .h2 {
-  font-size: 1.6rem;
+  font-size: clamp(1rem, 0.7429rem + 1.4286vw, 1.6rem);
 }
 h3,
 .h3 {
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 0.8286rem + 0.9524vw, 1.4rem);
 }
 h4,
 .h4 {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 0.9143rem + 0.4762vw, 1.2rem);
 }
 h5,
 .h5 {
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 0.7143rem + 0.4762vw, 1rem);
 }
 h6,
 .h6 {
-  font-size: .8rem;
+  font-size: clamp(0.6rem, 0.5143rem + 0.4762vw, 0.8rem);
 }
 
 // Paragraphs
