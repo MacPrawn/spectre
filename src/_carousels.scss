@@ -40,19 +40,6 @@ $carousel-number: 8;
       position: absolute;
       top: 0;
       width: 100%;
-
-      @include hover-supported {
-        .item-prev,
-        .item-next {
-          opacity: 1;
-        }
-      }
-      @include hover-not-supported {
-        .item-prev,
-        .item-next {
-          opacity: 1;
-        }
-      }
     }
 
     .item-prev,
@@ -66,6 +53,12 @@ $carousel-number: 8;
       transition: all .4s;
       transform: translateY(-50%);
       z-index: $zindex-1;
+      @include hover-supported {
+          opacity: 1;
+      }
+      @include hover-not-supported {
+          opacity: 1;
+      }
     }
     .item-prev {
       left: 1rem;
