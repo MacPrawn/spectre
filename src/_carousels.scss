@@ -40,6 +40,10 @@ $carousel-number: 8;
       position: absolute;
       top: 0;
       width: 100%;
+
+      &.active {
+        @extend %carousel-image-checked;
+      }
     }
 
     .item-prev,
@@ -65,20 +69,6 @@ $carousel-number: 8;
     }
     .item-next {
       right: 1rem;
-    }
-  }
-
-  .carousel-locator {
-    @for $i from 1 through ($carousel-number) {
-      &:nth-of-type(#{$i}):checked ~ .carousel-container .carousel-item:nth-of-type(#{$i}) {
-        @extend %carousel-image-checked;
-      }
-    }
-
-    @for $i from 1 through ($carousel-number) {
-      &:nth-of-type(#{$i}):checked ~ .carousel-nav .nav-item:nth-of-type(#{$i}) {
-        @extend %carousel-nav-checked;
-      }
     }
   }
 
@@ -109,6 +99,26 @@ $carousel-number: 8;
         position: absolute;
         top: .5rem;
         width: 100%;
+      }
+
+      &.active {
+        @extend %carousel-nav-checked;
+      }
+    }
+  }
+
+  &.automatic { /* use only if one carousel on the page */
+    .carousel-locator {
+      @for $i from 1 through ($carousel-number) {
+        &:nth-of-type(#{$i}):checked ~ .carousel-container .carousel-item:nth-of-type(#{$i}) {
+          @extend %carousel-image-checked;
+        }
+      }
+  
+      @for $i from 1 through ($carousel-number) {
+        &:nth-of-type(#{$i}):checked ~ .carousel-nav .nav-item:nth-of-type(#{$i}) {
+          @extend %carousel-nav-checked;
+        }
       }
     }
   }
