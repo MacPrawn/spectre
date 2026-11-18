@@ -1,7 +1,9 @@
+@use "sass:color";
+
 // Labels
 .label {
   @include label-base();
-  @include label-variant(lighten($body-font-color, 5%), $bg-color-dark);
+  @include label-variant(color.scale($body-font-color, $lightness: 5%), $bg-color-dark);
   display: inline-block;
 
   // Label rounded

@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "sass:color";
 
 // Core variables
 $version: "0.5.9";
@@ -8,47 +9,47 @@ $rtl: false !default;
 
 // Core colors
 $primary-color: #5755d9 !default;
-$primary-color-dark: darken($primary-color, 3%) !default;
-$primary-color-light: lighten($primary-color, 3%) !default;
-$secondary-color: lighten($primary-color, 37.5%) !default;
-$secondary-color-dark: darken($secondary-color, 3%) !default;
-$secondary-color-light: lighten($secondary-color, 3%) !default;
+$primary-color-dark: color.scale($primary-color, $lightness: -3%) !default;
+$primary-color-light: color.scale($primary-color, $lightness: 3%) !default;
+$secondary-color: color.scale($primary-color, $lightness: 37.5%) !default;
+$secondary-color-dark: color.scale($secondary-color, $lightness: -3%) !default;
+$secondary-color-light: color.scale($secondary-color, $lightness: 3%) !default;
 
 // Gray colors
 $dark-color: #303742 !default;
 $light-color: #fff !default;
-$gray-color: lighten($dark-color, 55%) !default;
-$gray-color-dark: darken($gray-color, 30%) !default;
-$gray-color-light: lighten($gray-color, 20%) !default;
+$gray-color: color.scale($dark-color, $lightness: 55%) !default;
+$gray-color-dark: color.scale($gray-color, $lightness: -30%) !default;
+$gray-color-light: color.scale($gray-color, $lightness: 20%) !default;
 
-$border-color: lighten($dark-color, 65%) !default;
-$border-color-dark: darken($border-color, 10%) !default;
-$border-color-light: lighten($border-color, 8%) !default;
-$bg-color: lighten($dark-color, 75%) !default;
-$bg-color-dark: darken($bg-color, 3%) !default;
+$border-color: color.scale($dark-color, $lightness: 65%) !default;
+$border-color-dark: color.scale($border-color, $lightness: -10%) !default;
+$border-color-light: color.scale($border-color, $lightness: 8%) !default;
+$bg-color: color.scale($dark-color, $lightness: 75%) !default;
+$bg-color-dark: color.scale($bg-color, $lightness: -3%) !default;
 $bg-color-light: $light-color !default;
 
 // Control colors
 $success-color: #32b643 !default;
-$success-color-dark: darken($success-color, 10%) !default;
-$success-color-light: lighten($success-color, 10%) !default;
+$success-color-dark: color.scale($success-color, $lightness: -10%) !default;
+$success-color-light: color.scale($success-color, $lightness: 10%) !default;
 
 $warning-color: #ffb700 !default;
-$warning-color-dark: darken($warning-color, 10%) !default;
-$warning-color-light: lighten($warning-color, 10%) !default;
+$warning-color-dark: color.scale($warning-color, $lightness: -10%) !default;
+$warning-color-light: color.scale($warning-color, $lightness: 10%) !default;
 
 $error-color: #e85600 !default;
-$error-color-dark: darken($error-color, 10%) !default;
-$error-color-light: lighten($error-color, 10%) !default;
+$error-color-dark: color.scale($error-color, $lightness: -10%) !default;
+$error-color-light: color.scale($error-color, $lightness: 10%) !default;
 
 // Other colors
 $code-color: #d73e48 !default;
 $highlight-color: #ffe9b3 !default;
 $body-bg: $bg-color-light !default;
-$body-font-color: lighten($dark-color, 5%) !default;
+$body-font-color: color.scale($dark-color, $lightness: 5%) !default;
 $link-color: $primary-color !default;
-$link-color-dark: darken($link-color, 10%) !default;
-$link-color-light: lighten($link-color, 10%) !default;
+$link-color-dark: color.scale($link-color, $lightness: -10%) !default;
+$link-color-light: color.scale($link-color, $lightness: 10%) !default;
 
 // Fonts
 // Credit: https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/

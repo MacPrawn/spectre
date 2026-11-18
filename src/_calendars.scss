@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // Calendars
 .calendar {
   border: $border-width solid $border-color;
@@ -88,7 +90,7 @@
       &:active,
       &.active {
         background: $primary-color-dark;
-        border-color: darken($primary-color-dark, 5%);
+        border-color: color.scale($primary-color-dark, $lightness: -5%);
         color: $light-color;
       }
 
@@ -150,7 +152,7 @@
     &.range-end {
       .date-item {
         background: $primary-color-dark;
-        border-color: darken($primary-color-dark, 5%);
+        border-color: color.scale($primary-color-dark, $lightness: -5%);
         color: $light-color;
       }
     }

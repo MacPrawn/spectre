@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // Background color utility mixin
 @mixin bg-color-variant($name: ".bg-primary", $color: $primary-color) {
   #{$name} {
@@ -17,13 +19,13 @@
 
   a#{$name} {
     &:focus {
-      color: darken($color, 5%);
+      color: color.scale($color, $lightness: -5%);
     }
     @include hover-supported {
-      color: darken($color, 5%);
+      color: color.scale($color, $lightness: -5%);
     }
     &:visited {
-      color: lighten($color, 5%);
+      color: color.scale($color, $lightness: 5%);
     }
   }
 }
