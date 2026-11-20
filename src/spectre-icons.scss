@@ -2,7 +2,7 @@
 @use "variables";
 @use "mixins";
 
-/*! Spectre.css Icons v#{$version} | MIT License | github.com/picturepan2/spectre */
+/*! Spectre.css Icons v#{variables.$version} | MIT License | github.com/picturepan2/spectre */
 // Icons
 @use "icons/icons-core";
 @use "icons/icons-navigation";
